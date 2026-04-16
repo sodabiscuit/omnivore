@@ -1,4 +1,4 @@
-FROM node:22.12-alpine as builder
+FROM node:24-alpine as builder
 
 WORKDIR /app
 
@@ -39,7 +39,7 @@ RUN rm -rf /app/packages/api/node_modules
 RUN rm -rf /app/node_modules
 RUN yarn install --pure-lockfile --production --network-timeout=300000
 
-FROM node:22.12-alpine as runner
+FROM node:24-alpine as runner
 
 WORKDIR /app
 

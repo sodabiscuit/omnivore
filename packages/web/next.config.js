@@ -9,7 +9,7 @@ const ContentSecurityPolicy = `
   manifest-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval' accounts.google.com https://widget.intercom.io https://js.intercomcdn.com https://platform.twitter.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.recaptcha.net https://www.gstatic.cn/ https://*.neutral.ttwstatic.com https://www.tiktok.com/embed.js https://browser.sentry-cdn.com https://js.sentry-cdn.com;
   style-src 'self' 'unsafe-inline' https://accounts.google.com https://cdnjs.cloudflare.com https://*.neutral.ttwstatic.com;
-  img-src 'self' blob: data: https:;
+  img-src 'self' blob: data: http://localhost:7070;
   worker-src 'self' blob:;
   media-src https://js.intercomcdn.com;
 `

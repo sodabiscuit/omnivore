@@ -1,4 +1,4 @@
- FROM node:22.12 as builder
+ FROM node:24 as builder
 
 WORKDIR /app
 
@@ -17,7 +17,7 @@ COPY /packages/discord/tsconfig.json ./packages/discord/tsconfig.json
 RUN yarn install --pure-lockfile --network-timeout=300000
 RUN yarn workspace @omnivore/discord build
 
-FROM node:22.12 as runner
+FROM node:24 as runner
 
 WORKDIR /app
 
